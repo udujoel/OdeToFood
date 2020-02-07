@@ -47,5 +47,10 @@
     <Compile Include="Services\InMemoryRestaurantData.cs" />
     <Compile Include="Services\IRestaurantData.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Autofac.Mvc5">
+      <Version>5.0.0</Version>
+    </PackageReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
