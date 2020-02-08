@@ -22,7 +22,8 @@ namespace OdeToFood.Web.Controllers
 
         public ActionResult Detail(int id)
         {
-
+            var model = _db.Get(id);
+            return View(model);
         }
     }
 }
