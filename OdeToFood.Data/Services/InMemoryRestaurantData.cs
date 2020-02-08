@@ -3,11 +3,14 @@ using System.Linq;
 
 using OdeToFood.Data.Models;
 
-namespace OdeToFood.Data.Services {
-    public class InMemoryRestaurantData :IRestaurantData {
+namespace OdeToFood.Data.Services
+{
+    public class InMemoryRestaurantData : IRestaurantData
+    {
         private List<Restaurant> restaurants;
 
-        public InMemoryRestaurantData() {
+        public InMemoryRestaurantData()
+        {
             restaurants = new List<Restaurant>()
             {
 
@@ -16,9 +19,15 @@ namespace OdeToFood.Data.Services {
                 new Restaurant{Id = 3,Name = "Jacobson's Bites", Cusine = CuisineType.Indian}
 
             };
-            }
-        public IEnumerable<Restaurant> GetAll() {
+        }
+        public IEnumerable<Restaurant> GetAll()
+        {
             return restaurants.OrderBy(r => r.Name);
-            }
+        }
+
+        public Restaurant Get(int id)
+        {
+            return restaurants.FirstOrDefault(r => r.Id == id);
         }
     }
+}
