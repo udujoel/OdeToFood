@@ -51,6 +51,9 @@
     <Reference Include="Autofac.Integration.Mvc">
       <HintPath>..\..\..\..\.nuget\packages\autofac.mvc5\5.0.0\lib\net461\Autofac.Integration.Mvc.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces">
+      <HintPath>..\..\..\..\.nuget\packages\microsoft.bcl.asyncinterfaces\1.1.0\ref\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -123,6 +126,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\RestaurantController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\ContainerConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -175,6 +179,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Restaurant\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
